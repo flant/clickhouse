@@ -53,7 +53,7 @@ module Clickhouse
               parse_int_value value
             when "Float32", "Float64"
               parse_float_value value
-            when "String", "Enum8", "Enum16"
+            when "String", "LowCardinality(String)", "Enum8", "Enum16"
               parse_string_value value
             when /FixedString\(\d+\)/
               parse_fixed_string_value value
